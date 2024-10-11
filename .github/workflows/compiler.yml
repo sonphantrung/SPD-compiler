@@ -29,9 +29,8 @@ jobs:
           cd shattered-pixel-dungeon
           ls
           chmod +x ./gradlew
-          ./gradlew --stacktrace build
-          cd ..
+          ./gradlew --stacktrace :ios:createIPA
      - uses: actions/upload-artifact@v4
        with:
         name: spd
-        path: shattered-pixel-dungeon
+        path: ios
