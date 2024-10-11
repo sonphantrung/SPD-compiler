@@ -28,5 +28,6 @@ jobs:
     
      - name: Build
        run: |
+          ls
           chmod +x ./gradlew
-          ./gradlew --stacktrace :ios
+          ./gradlew --stacktrace ios
