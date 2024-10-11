@@ -33,4 +33,4 @@ jobs:
      - uses: actions/upload-artifact@v4
        with:
         name: spd
-        path: shattered-pixel-dungeon/ios
+        path: shattered-pixel-dungeon/ios/build/robovm/IOSLauncher.ipa
