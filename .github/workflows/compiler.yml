@@ -29,4 +29,4 @@ jobs:
           cd shattered-pixel-dungeon
           ls
           chmod +x ./gradlew
-          ./gradlew --stacktrace ios
+          ./gradlew --stacktrace build
