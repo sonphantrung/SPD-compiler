@@ -9,10 +9,7 @@ jobs:
   ios-comp:
    runs-on: macos-12
    steps:
-     - name: Checkout
-       uses: actions/checkout@v4
-       with:
-         repository: 00-Evan/shattered-pixel-dungeon
+     - uses: actions/checkout@v4
      - name: Setup JDK 17
        uses: actions/setup-java@v4
        with:
@@ -28,6 +25,8 @@ jobs:
     
      - name: Build
        run: |
+          git clone --depth=1 --recurse-submodules https://github.com/00-Evan/shattered-pixel-dungeon
+          cd shattered-pixel-dungeon
           ls
           chmod +x ./gradlew
           ./gradlew --stacktrace ios
