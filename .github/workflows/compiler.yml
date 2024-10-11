@@ -28,9 +28,8 @@ jobs:
           git clone --depth=1 --recurse-submodules https://github.com/00-Evan/shattered-pixel-dungeon
           cd shattered-pixel-dungeon
           ls
-          sed -i -e "s/23/9/g" build.gradle
           chmod +x ./gradlew
-          ./gradlew --stacktrace :ios:createIPA
+          ./gradlew --stacktrace :ios:createIPA -Probovm.iosSkipSigning=true
      - uses: actions/upload-artifact@v4
        with:
         name: spd
