@@ -30,3 +30,8 @@ jobs:
           ls
           chmod +x ./gradlew
           ./gradlew --stacktrace build
+          cd ..
+     - uses: actions/upload-artifact@v4
+       with:
+        name: spd
+        path: shattered-pixel-dungeon
